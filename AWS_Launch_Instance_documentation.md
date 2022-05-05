@@ -1,9 +1,10 @@
+### Set up:
 * Head into the following webpage, `https://sparta-devops.signin.aws.amazon.com/console`.
 * Sign in as a IAM user using the Account ID, IAM username and password given by SpartaGlobal.
-* MAke sure the region is selected to be `Ireland`.
+* Make sure the region is selected to be `Ireland`.
 * Search for `EC2` in the search box and click on it.
 * Look for `Launch instance` and then browse down to `Launch instance` and click on it.
-### 1. Step: Choose an Amazon Machine Image (AMI)
+### Step 1: Choose an Amazon Machine Image (AMI)
 * > Select the box for `Free tier only` to only allow creation for free versions of the instances (Virtual Machine).
 * > Look for `Ubuntu Server 18.04 LTS` as per the requirement for the client and press the button `Select`.
 ### Step 2: Choose an Instance Type
