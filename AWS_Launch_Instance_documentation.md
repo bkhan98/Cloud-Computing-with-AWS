@@ -43,8 +43,14 @@
 * > sudo apt npm start -y
 * > sudo systemctl start nginx
 * > sudo systemctl enable nginx
-
-
-
-
+### Step 10: Adding files from local host to EC2
+* > scp -i location/file.pem -r destination/dir ec2@ip.com:source/file/or/folder
+* > SCP is secure file proxy
+* > -i is identifier
+* > pem location
+* > -r receive
+* > destination
+* > Public DNS/ec2 id
+* > source file or folder
+* > netstat -tulpn | grep PORT_NUMBER - checks if the port is listening to X
 
