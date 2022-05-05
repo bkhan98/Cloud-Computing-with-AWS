@@ -1,4 +1,3 @@
-# Cloud-Computing-with-AWS
 # AWS/DevOps/IT Best Practices
 * #### Naming convention: eng110_shahrukh
 * #### AWS service i.e EC2 instances should turned off/stopped/terminated by 1800 
