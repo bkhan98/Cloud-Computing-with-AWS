@@ -14,3 +14,32 @@
 # Tick `Enable` for `DNS Hostname` and leave everything else as is and click `Next: Add Storage`.
 4. Step 4: Add Storage
 # For the moment don't change anything unless specified by client for storage (just makesure the storage is enough for the app and click `Next: Add Tags`.
+5. Step 5: Add Tags
+# In this section under `Key` type 'Name' and then under `Value` type 'eng110_bilalkhan' and then click on `Next: Configure Security Group`
+6. Step 6: Configure Security Group
+# For `Assign a security group` select `Create a new security group` then under `Security group name` type 'eng110_bilalkhan_sg_app' and same for `Description` again.
+# Then for `Type` select `SSH` but for `Source` select `My IP` and then for `Description` type 'office ip - my ip'.
+# Then click on `Add Rule` and for `Type` select `HTTP` but for `Source` select `Anywhere` and for `Description` type 'for nginx - public ip' and press `Review and Launch`
+7. Step 7: Review Instance Launch
+# Just check if everything is correct and doucble check as you can still review it.
+# In this section you will get a pop-up box and make sure the first box says 'Choose an existing pair' and for `Select a key pair` its 'eng119|RSA' then tick the box below and select 'Launch Instances'.
+8. SSH into the New Machine
+# So to SSH into the machine select the `Instance under `Instances` and click on `Connect` and then click on the tab `SSH client`
+# Follow the information given by AWS:
+## 1. Open an SSH client (meaning Bash\Terminal).
+## 2. Locate your private key file. The key used to launch this instance is "eng119.pem", and put it in .ssh folder.
+## 3. Run this command, if necessary, to ensure your key is not publicly viewable.
+        > chmod 400 eng119.pem # to give it permission
+## 4. Connect to your instance using its Public DNS:
+        > there will be an address
+        > for example: ssh -i"eng119.pem"ubuntiu@....
+## 5. Copy the 4. example and put in the terminal when you are in the .ssh folder within terminal and run it and type "Yes".
+## Check if you're in linux or status by typing "uname -a"
+9. install, enable and start Nginx like before in Vagrant.
+## sudo apt update -y
+## sudo apt upgrade -y
+## sudo apt install nginx -y
+
+
+
+
