@@ -48,7 +48,6 @@ Start nginx
 Enable nginx
 * > sudo systemctl enable nginx
 
-
 ### Step 10: Adding files from local host to EC2
 * > scp -i location/file.pem -r destination/dir ec2@ip.com:source/file/or/folder
 * > SCP is secure file proxy
