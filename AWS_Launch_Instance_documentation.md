@@ -37,12 +37,18 @@
   * >  5. Copy the 4. example and put in the terminal when you are in the .ssh folder within terminal and run it and type "Yes".
 * >  Check if you're in linux or status by typing "uname -a"
 ### Step 9: install, enable and start Nginx like before in Vagrant.
-* > sudo apt update -y
-* > sudo apt upgrade -y
-* > sudo apt install nginx -y
-* > sudo apt npm start -y
+Run updates. the `-y` means any notifications of whether you want to continue will be met with a yes
+* > sudo apt-get update -y
+Run upgrades
+* > sudo apt-get upgrade -y
+Install nginx
+* > sudo apt-get install nginx -y
+Start nginx
 * > sudo systemctl start nginx
+Enable nginx
 * > sudo systemctl enable nginx
+
+
 ### Step 10: Adding files from local host to EC2
 * > scp -i location/file.pem -r destination/dir ec2@ip.com:source/file/or/folder
 * > SCP is secure file proxy
