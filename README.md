@@ -138,3 +138,6 @@ if you would like to use later than 1800 please ask, latest time 2000
 * eng119.pem - move to .ssh folder in your machine
 
 # Steps to set up AWS instance
+
+<img width="1468" alt="Screenshot 2022-05-05 at 01 27 44" src="https://user-images.githubusercontent.com/92460952/166847860-e699f01b-200a-4460-84cb-1da884788f26.png">
+
