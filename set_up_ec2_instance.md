@@ -102,4 +102,43 @@
         > for example: ssh -i"eng119.pem"ubuntiu@....
   * >  5. Copy the command under `'4. example'` and put it into the terminal when you are in the .ssh folder within terminal and run it and type "Yes".
 * >  Check if you're in linux or status by typing "uname -a"
-### Setting up MongoDB
+## Connecting to EC2
+   * > sudo apt-get update -y
+   * > sudo apt-get upgrade -y
+   * > sudo apt-get install nginx -y
+ * Go to your public IP ( Found on EC2 instance connect)
+
+
+## setting up mongod
+> 1. Type in these commands, one by one:
+
+        sudo apt-get update -y
+        sudo apt-get upgrade -y
+        sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv D68FA50FEA312927
+        echo "deb https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+        sudo apt-get update -y
+        sudo apt-get upgrade -y
+        sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org-shell=3.2.20 mongodb-org-mongos=3.2.20 mongodb-org-tools=3.2.20
+        sudo systemctl status mongod
+        sudo systemctl start mongod
+        sudo systemctl enable mongod
+        sudo systemctl status mongod
+
+> 2. Type in `cd /etc` and then type in `sudo nano mongod.conf`. Under `network interfaces`, for the ip put in `0.0.0.0`. Save and exit.
+
+> 3. Type in these commands:
+
+        sudo systemctl restart mongod
+        sudo systemctl enable mongod
+        sudo systemctl status mongod
+
+> 4. In your app EC2 instance, type in `sudo echo "export DB_HOST=mongodb://your_db_ip:27017/posts" >> ~/.bashrc`. 
+
+> 4. Run the command `source ~/.bashrc`.
+
+> 5. Check the environment variable with the command `printenv DB_HOST`.
+
+> 6. Still in the app EC2 instance, run the command `node seeds/seed.js`. 
+
+> 7. Type in `npm start`. 
+
